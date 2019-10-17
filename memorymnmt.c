@@ -34,25 +34,26 @@ void fcfs(int m,int q_size,int h,int queue[])
 
 void scan(int m,int q_size,int h,int queue[])
 {
+    int i,array[20],thm=0,prehead=0,max,head;
     max=m;head=h;
 
     printf("\nEnter the previous position of head :");
-    scanf("%",&prehead);
+    scanf("%d",&prehead);
 
     for (i=0;i<q_size;i++) array[i]=queue[i];
-    sort(arra,q_size)
+    sort(array,q_size);
 
     
 
-    if(head>prhead)
+    if(head>prehead)
     {
         thm=abs(max-head+max-array[0]);
     }
     else
     {
-        
+        thm=abs(head+array[q_size-1]);
     }
-    print("\nTotal head movement : %d\n",thm);
+    printf("\nTotal head movement : %d\n",thm);
 }
 
 void cscan(int m, int q_size,int h,int queue[])
